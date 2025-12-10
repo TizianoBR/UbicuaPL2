@@ -1,0 +1,23 @@
+{
+"sensor_id":"TL_073",
+"sensor_type":"TL",
+"street_id":"ST_1103",
+"timestamp":"2025-09-18T09:37:28.225646",
+"location":{
+    "latitude":40.3636491,
+    "longitude":-3.7584933,
+    "district":"Latina",
+    "neighborhood":"Lucero"
+},
+"data":{ 
+    "state": "Gr",
+    "TL_type":"mixed",
+    "wait":0,
+    "lock":0,
+    "timeGr":1000,
+    "timeYr":2000,
+    "timeRg":2000,
+    "timeRr1":2000,
+    "timeRr2":2000
+ }
+}

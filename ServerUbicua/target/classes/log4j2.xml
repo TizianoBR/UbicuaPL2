@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <!-- Application log -->
+        <RollingFile name="LogFile"
+                     fileName="${sys:catalina.base}/logs/Ubicua.log"
+                     filePattern="${sys:catalina.base}/logs/Ubicua-%d{yyyy}-%i.log.gz">
+            <PatternLayout pattern="%n%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-30l %logger{36} ### %msg"
+                           header="-- UBICUA SERVER LOG --" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <!-- MQTT log -->
+        <RollingFile name="LogFileMQTT"
+                     fileName="${sys:catalina.base}/logs/Ubicua-mqtt.log"
+                     filePattern="${sys:catalina.base}/logs/Ubicua-mqtt-%d{yyyy}-%i.log.gz">
+            <PatternLayout pattern="%n%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-30l %logger{36} ### %msg"
+                           header="-- UBICUA MQTT LOG --" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <!-- Database log -->
+        <RollingFile name="LogFileDB"
+                     fileName="${sys:catalina.base}/logs/Ubicua-db.log"
+                     filePattern="${sys:catalina.base}/logs/Ubicua-db-%d{yyyy}-%i.log.gz">
+            <PatternLayout pattern="%n%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-30l %logger{36} ### %msg"
+                           header="-- UBICUA DB LOG --" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="log" additivity="FALSE" level="DEBUG">
+            <AppenderRef ref="LogFile" level="DEBUG" />
+        </Logger>
+
+        <Logger name="logmqtt" additivity="FALSE" level="DEBUG">
+            <AppenderRef ref="LogFileMQTT" level="DEBUG" />
+        </Logger>
+
+        <Logger name="logdb" additivity="FALSE" level="DEBUG">
+            <AppenderRef ref="LogFileDB" level="DEBUG" />
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="LogFile" />
+        </Root>
+    </Loggers>
+</Configuration>

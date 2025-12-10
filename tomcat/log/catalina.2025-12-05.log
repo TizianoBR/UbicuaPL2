@@ -1,0 +1,607 @@
+05-Dec-2025 18:06:47.627 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+05-Dec-2025 18:06:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+05-Dec-2025 18:06:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+05-Dec-2025 18:06:47.631 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Dec-2025 18:06:47.632 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+05-Dec-2025 18:06:47.632 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Dec-2025 18:06:47.632 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+05-Dec-2025 18:06:47.632 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.1+8-LTS
+05-Dec-2025 18:06:47.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+05-Dec-2025 18:06:47.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+05-Dec-2025 18:06:47.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+05-Dec-2025 18:06:47.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+05-Dec-2025 18:06:47.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2025 18:06:47.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2025 18:06:47.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2025 18:06:47.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Dec-2025 18:06:47.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+05-Dec-2025 18:06:47.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Dec-2025 18:06:47.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Dec-2025 18:06:47.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Dec-2025 18:06:47.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Dec-2025 18:06:47.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+05-Dec-2025 18:06:47.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+05-Dec-2025 18:06:47.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+05-Dec-2025 18:06:47.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+05-Dec-2025 18:06:47.686 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+05-Dec-2025 18:06:47.711 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+05-Dec-2025 18:06:48.517 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:06:48.585 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1394] milliseconds
+05-Dec-2025 18:06:48.709 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Dec-2025 18:06:48.710 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+05-Dec-2025 18:06:48.782 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 18:06:48.842 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/usr/local/tomcat/webapps/Ubicua] was found with a last modified time that did not match the associated WAR. It will be deleted.
+05-Dec-2025 18:06:56.002 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 18:07:09.331 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [20,548] ms
+05-Dec-2025 18:07:09.339 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:07:09.355 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [20767] milliseconds
+05-Dec-2025 18:42:32.456 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war]
+05-Dec-2025 18:42:36.616 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 18:42:47.180 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war] has finished in [14,724] ms
+05-Dec-2025 18:42:57.193 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 18:42:57.214 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:42:57.214 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:42:57.215 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:42:57.215 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:42:57.548 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua-1.0-SNAPSHOT]
+05-Dec-2025 18:42:57.555 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:42:57.911 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 18:43:02.639 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 18:43:12.923 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [15,011] ms
+05-Dec-2025 18:53:51.941 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:53:51.944 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Dec-2025 18:53:51.994 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:53:51.994 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:53:51.994 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:53:51.994 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:53:51.994 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:53:52.000 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:53:52.012 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:56:26.637 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+05-Dec-2025 18:56:26.641 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+05-Dec-2025 18:56:26.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+05-Dec-2025 18:56:26.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Dec-2025 18:56:26.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+05-Dec-2025 18:56:26.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Dec-2025 18:56:26.642 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+05-Dec-2025 18:56:26.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.1+8-LTS
+05-Dec-2025 18:56:26.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+05-Dec-2025 18:56:26.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+05-Dec-2025 18:56:26.643 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+05-Dec-2025 18:56:26.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+05-Dec-2025 18:56:26.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2025 18:56:26.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2025 18:56:26.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2025 18:56:26.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Dec-2025 18:56:26.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+05-Dec-2025 18:56:26.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Dec-2025 18:56:26.667 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Dec-2025 18:56:26.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Dec-2025 18:56:26.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Dec-2025 18:56:26.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+05-Dec-2025 18:56:26.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+05-Dec-2025 18:56:26.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+05-Dec-2025 18:56:26.668 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+05-Dec-2025 18:56:26.680 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+05-Dec-2025 18:56:26.693 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+05-Dec-2025 18:56:27.058 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:56:27.098 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [780] milliseconds
+05-Dec-2025 18:56:27.153 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Dec-2025 18:56:27.153 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+05-Dec-2025 18:56:27.186 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 18:56:27.219 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/usr/local/tomcat/webapps/Ubicua] was found with a last modified time that did not match the associated WAR. It will be deleted.
+05-Dec-2025 18:56:32.065 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 18:56:41.846 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,659] ms
+05-Dec-2025 18:56:41.851 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:56:41.868 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [14768] milliseconds
+05-Dec-2025 18:58:23.896 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:58:23.898 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Dec-2025 18:58:23.958 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:58:23.958 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:58:23.958 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:58:23.959 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:58:23.970 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:58:23.983 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:58:29.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+05-Dec-2025 18:58:29.519 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+05-Dec-2025 18:58:29.520 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+05-Dec-2025 18:58:29.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Dec-2025 18:58:29.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+05-Dec-2025 18:58:29.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Dec-2025 18:58:29.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+05-Dec-2025 18:58:29.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.1+8-LTS
+05-Dec-2025 18:58:29.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+05-Dec-2025 18:58:29.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+05-Dec-2025 18:58:29.524 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+05-Dec-2025 18:58:29.549 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+05-Dec-2025 18:58:29.549 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2025 18:58:29.549 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2025 18:58:29.550 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2025 18:58:29.550 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Dec-2025 18:58:29.550 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+05-Dec-2025 18:58:29.550 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Dec-2025 18:58:29.550 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Dec-2025 18:58:29.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Dec-2025 18:58:29.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Dec-2025 18:58:29.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+05-Dec-2025 18:58:29.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+05-Dec-2025 18:58:29.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+05-Dec-2025 18:58:29.551 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+05-Dec-2025 18:58:29.559 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+05-Dec-2025 18:58:29.567 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+05-Dec-2025 18:58:29.942 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:58:29.974 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [805] milliseconds
+05-Dec-2025 18:58:30.027 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Dec-2025 18:58:30.027 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+05-Dec-2025 18:58:30.054 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 18:58:30.083 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/usr/local/tomcat/webapps/Ubicua] was found with a last modified time that did not match the associated WAR. It will be deleted.
+05-Dec-2025 18:58:34.632 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 18:58:45.166 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [15,111] ms
+05-Dec-2025 18:58:45.171 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:58:45.183 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [15208] milliseconds
+05-Dec-2025 18:59:13.973 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:59:13.977 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Dec-2025 18:59:14.055 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:59:14.056 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:59:14.056 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 18:59:14.057 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 18:59:14.065 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:59:14.070 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:59:15.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+05-Dec-2025 18:59:15.441 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+05-Dec-2025 18:59:15.442 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+05-Dec-2025 18:59:15.442 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Dec-2025 18:59:15.442 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+05-Dec-2025 18:59:15.442 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Dec-2025 18:59:15.442 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+05-Dec-2025 18:59:15.443 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.1+8-LTS
+05-Dec-2025 18:59:15.443 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+05-Dec-2025 18:59:15.443 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+05-Dec-2025 18:59:15.443 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+05-Dec-2025 18:59:15.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+05-Dec-2025 18:59:15.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2025 18:59:15.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2025 18:59:15.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2025 18:59:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Dec-2025 18:59:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+05-Dec-2025 18:59:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Dec-2025 18:59:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Dec-2025 18:59:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Dec-2025 18:59:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Dec-2025 18:59:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+05-Dec-2025 18:59:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+05-Dec-2025 18:59:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+05-Dec-2025 18:59:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+05-Dec-2025 18:59:15.461 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+05-Dec-2025 18:59:15.469 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+05-Dec-2025 18:59:15.870 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:59:15.903 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [643] milliseconds
+05-Dec-2025 18:59:15.943 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Dec-2025 18:59:15.944 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+05-Dec-2025 18:59:15.971 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 18:59:15.999 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/usr/local/tomcat/webapps/Ubicua] was found with a last modified time that did not match the associated WAR. It will be deleted.
+05-Dec-2025 18:59:20.512 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 18:59:30.305 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,333] ms
+05-Dec-2025 18:59:30.310 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 18:59:30.321 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [14414] milliseconds
+05-Dec-2025 19:00:31.747 INFO [Thread-12] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 19:00:31.750 INFO [Thread-12] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Dec-2025 19:00:31.814 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 19:00:31.815 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 19:00:31.816 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 19:00:31.816 WARNING [Thread-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 19:00:31.824 INFO [Thread-12] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 19:00:31.835 INFO [Thread-12] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 19:00:51.466 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.14
+05-Dec-2025 19:00:51.469 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 5 2025 19:03:02 UTC
+05-Dec-2025 19:00:51.469 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.14.0
+05-Dec-2025 19:00:51.470 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Dec-2025 19:00:51.470 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.6.87.2-microsoft-standard-WSL2
+05-Dec-2025 19:00:51.470 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Dec-2025 19:00:51.470 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+05-Dec-2025 19:00:51.471 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.1+8-LTS
+05-Dec-2025 19:00:51.471 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+05-Dec-2025 19:00:51.471 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+05-Dec-2025 19:00:51.471 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+05-Dec-2025 19:00:51.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+05-Dec-2025 19:00:51.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2025 19:00:51.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2025 19:00:51.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2025 19:00:51.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Dec-2025 19:00:51.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+05-Dec-2025 19:00:51.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Dec-2025 19:00:51.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Dec-2025 19:00:51.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Dec-2025 19:00:51.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Dec-2025 19:00:51.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+05-Dec-2025 19:00:51.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+05-Dec-2025 19:00:51.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+05-Dec-2025 19:00:51.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+05-Dec-2025 19:00:51.486 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.9] using APR version [1.7.2].
+05-Dec-2025 19:00:51.493 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+05-Dec-2025 19:00:51.767 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 19:00:51.784 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [504] milliseconds
+05-Dec-2025 19:00:51.823 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Dec-2025 19:00:51.823 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.14]
+05-Dec-2025 19:00:51.855 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 19:00:51.883 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/usr/local/tomcat/webapps/Ubicua] was found with a last modified time that did not match the associated WAR. It will be deleted.
+05-Dec-2025 19:00:56.575 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 19:01:06.692 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,836] ms
+05-Dec-2025 19:01:06.697 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Dec-2025 19:01:06.707 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [14920] milliseconds
+05-Dec-2025 19:26:58.901 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 19:26:58.966 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 19:26:58.966 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 19:26:58.966 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 19:26:58.967 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Ping: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 19:26:59.301 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war]
+05-Dec-2025 19:27:03.448 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 19:27:13.791 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war] has finished in [14,491] ms
+05-Dec-2025 19:27:23.796 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua-1.0-SNAPSHOT]
+05-Dec-2025 19:27:23.811 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 19:27:24.261 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 19:27:28.379 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 19:27:39.227 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,966] ms
+05-Dec-2025 20:46:55.494 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 20:46:56.351 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 20:46:56.715 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 20:47:01.417 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 20:47:11.806 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [15,089] ms
+05-Dec-2025 21:15:23.992 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 21:15:24.053 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 21:15:24.053 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Con: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Thread.sleepNanos0(Native Method)
+ java.base/java.lang.Thread.sleepNanos(Thread.java:509)
+ java.base/java.lang.Thread.sleep(Thread.java:540)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.start(CommsCallback.java:110)
+ org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:729)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 21:15:24.053 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 21:15:24.053 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 21:15:24.054 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Call: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.CommsCallback.run(CommsCallback.java:181)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 21:15:24.402 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 21:15:28.798 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 21:15:39.373 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,971] ms
+05-Dec-2025 22:16:56.678 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 22:16:56.779 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 22:16:56.779 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Con: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+ java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+ java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+ java.base/java.net.Socket.connect(Socket.java:659)
+ org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:74)
+ org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:724)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:16:57.169 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war]
+05-Dec-2025 22:17:01.386 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 22:17:11.282 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war] has finished in [14,114] ms
+05-Dec-2025 22:17:21.285 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua-1.0-SNAPSHOT]
+05-Dec-2025 22:17:21.301 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 22:17:21.617 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 22:17:25.679 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 22:17:35.995 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,378] ms
+05-Dec-2025 22:19:46.124 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 22:19:46.185 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 22:19:46.185 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 22:19:46.186 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Con: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+ java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+ java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+ java.base/java.net.Socket.connect(Socket.java:659)
+ org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:74)
+ org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:724)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:19:46.186 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Con: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Thread.sleepNanos0(Native Method)
+ java.base/java.lang.Thread.sleepNanos(Thread.java:509)
+ java.base/java.lang.Thread.sleep(Thread.java:540)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.start(CommsSender.java:79)
+ org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:728)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:19:46.186 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:19:46.186 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:19:46.529 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war]
+05-Dec-2025 22:19:50.588 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 22:20:00.656 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua-1.0-SNAPSHOT.war] has finished in [14,127] ms
+05-Dec-2025 22:20:10.659 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua-1.0-SNAPSHOT]
+05-Dec-2025 22:20:10.668 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:543)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 22:20:10.668 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Con: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Thread.sleepNanos0(Native Method)
+ java.base/java.lang.Thread.sleepNanos(Thread.java:509)
+ java.base/java.lang.Thread.sleep(Thread.java:540)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.start(CommsSender.java:79)
+ org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:728)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:20:10.668 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Rec: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:190)
+ java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:279)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+ java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:958)
+ java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300)
+ java.base/java.io.DataInputStream.readByte(DataInputStream.java:280)
+ org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:92)
+ org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:137)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:20:10.668 WARNING [Catalina-utility-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua-1.0-SNAPSHOT] appears to have started a thread named [MQTT Snd: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.Object.wait(Object.java:351)
+ org.eclipse.paho.client.mqttv3.internal.ClientState.get(ClientState.java:833)
+ org.eclipse.paho.client.mqttv3.internal.CommsSender.run(CommsSender.java:129)
+ java.base/java.lang.Thread.run(Thread.java:1474)
+05-Dec-2025 22:20:11.126 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 22:20:14.888 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 22:20:25.301 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [14,174] ms
+05-Dec-2025 22:23:25.459 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Ubicua]
+05-Dec-2025 22:23:25.518 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Ubicua] appears to have started a thread named [MQTT Reconnect: WheatherStationUAH-subscriber] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:569)
+ java.base/java.util.TimerThread.run(Timer.java:522)
+05-Dec-2025 22:23:25.852 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/Ubicua.war]
+05-Dec-2025 22:23:29.611 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Dec-2025 22:23:39.100 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/Ubicua.war] has finished in [13,248] ms

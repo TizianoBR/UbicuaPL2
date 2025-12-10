@@ -1,0 +1,21 @@
+{
+  "sensor_id": "sensor_003",
+  "sensor_type": "traffic_light",
+  "street_id": "ST_1103",
+  "latitude": 40.4210,
+  "longitude": -3.7038,
+  "district": "Centro",
+  "neighborhood": "Calle Mayor",
+  "time": "2025-12-05T20:00:00Z",
+  "current_state": "green",
+  "cycle_position": 3,
+  "time_remaining": 25,
+  "traffic_light_type": "vehicle",
+  "circulation_dir": "north_south",
+  "pedestrian_waiting": true,
+  "pedestrian_button_pressed": false,
+  "malfunction_detected": false,
+  "cycle_count": 16,
+  "state_changed": true,
+  "last_state_change": "2025-12-05T19:59:00Z"
+}

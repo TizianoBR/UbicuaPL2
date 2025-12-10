@@ -1,0 +1,70 @@
+name: ubicua-stack
+
+services:
+  # Servicio: Broker MQTT (Eclipse Mosquitto, mensajería en tiempo real)
+  mqtt:
+    image: eclipse-mosquitto:latest
+    container_name: mqtt-server
+    ports:
+      - "1883:1883"  # Puerto MQTT estándar
+      - "9001:9001"  # Puerto WebSocket para MQTT
+    volumes:
+      - ./mqtt/config:/mosquitto/config   # Configuración personalizada    
+      - ./mqtt/log:/mosquitto/log         # Logs del broker
+      - mosquitto_data:/mosquitto/data    # Persistencia adicional 
+    networks:
+      - app-network
+    restart: unless-stopped
+    # Ahora vamos a comprobar que el broker MQTT está funcionando correctamente
+    healthcheck:
+      test: ["CMD-SHELL", "mosquitto_pub -h localhost -t health/check -m 'test' || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+  ubicuabbdd:
+    image: postgres:11
+    container_name: ubicuabbdd_server
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ubicuabbdd
+      - POSTGRES_USER=postgres # usuario de aplicación
+      - POSTGRES_PASSWORD=postgres # password de aplicación
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+    volumes:
+      - ubicuabbdd_data:/var/lib/postgresql/data
+      - ./ubicuabbdd/BBDD.sql:/docker-entrypoint-initdb.d/BBDD.sql:ro
+      #########
+  tomcat:
+    build: .
+    environment:
+      - DB_HOST=ubicuabbdd
+      - DB_PORT=5432
+      - WAIT_TIMEOUT=60
+    container_name: tomcat_server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./tomcat/webapps:/usr/local/tomcat/webapps
+      - ./tomcat/conf/context.xml:/usr/local/tomcat/conf/context.xml
+      - ./tomcat/log:/usr/local/tomcat/logs
+
+    networks:
+      - app-network
+    depends_on:
+      - ubicuabbdd
+      - mqtt
+# Volúmenes persistentes para datos de broker MQTT
+volumes:
+  mosquitto_data:
+  ubicuabbdd_data:
+  tomcat_logs:
+# Red interna para comunicación entre servicios
+networks:
+  app-network:
+    driver: bridge

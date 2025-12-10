@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+        <title>Server example</title>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function ()
+            {
+                loadData();
+            });
+
+            function loadData() {
+                $.ajax({
+                    url: "/Ubicua/GetData",  // url correcta con contexto
+                    type: 'GET',
+                    success: function(response) {
+                        $("#dataTable").empty();
+                        var newRow = "";
+                        $.each(response, function(i, value) {
+                            newRow += "<tr>";
+                            newRow += "<td>" + value.date + "</td>";
+                            newRow += "<td>" + value.value + " C</td>";
+                            newRow += "</tr>";
+                        });
+                        $("#dataTable").append(newRow);
+                    },
+                    error: function() {
+                        alert("Error cargando datos");
+                    }
+                });
+            }
+
+            function insertData() {
+                var value = $('#newValue').val();
+                $.ajax({
+                    url: "/Ubicua/SetData",
+                    type: 'POST',
+                    data: { value: value },
+                    success: function(response) {
+                        if (response.success) {
+                            loadData();
+                        } else {
+                            alert("Error al insertar");
+                        }
+                    },
+                    error: function() {
+                        alert("Error al insertar");
+                    }
+                });
+            }
+
+            function triggerTL(){
+                $.ajax({
+                    url: "/Ubicua/TriggerTL",
+                    type: 'POST',
+                    success: function(response) {
+                        if (!response.success) {
+                            alert("Error al activar semáforo");
+                        }
+                    },
+                    error: function() {
+                        alert("Error al activar semáforo");
+                    }
+                });
+            }
+
+        </script>
+        <h1>SERVER EXAMPLE</h1>
+        <br>
+        <button onclick="triggerTL()">Pulsar boton semaforo</button>
+        <br><br>
+        <label>New value</label>
+        <input type="number" id="newValue"><br>
+        <button onclick="insertData()">Send</button> 
+        <br><br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">SixSeveeeen</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+            </tbody>
+        </table>		
+    </body>
+</html>

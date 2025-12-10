@@ -1,0 +1,14 @@
+<Context>
+    <Resource 
+        name="jdbc/ubicuabbdd"
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxTotal="20"
+        maxIdle="10"
+        maxWaitMillis="-1"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd"
+        username="postgres"
+        password="postgres"
+    />
+</Context>
