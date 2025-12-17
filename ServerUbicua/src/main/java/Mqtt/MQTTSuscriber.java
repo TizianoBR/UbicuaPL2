@@ -77,6 +77,12 @@ public class MQTTSuscriber implements MqttCallback {
                 if (jo.has("sensor_id") && !jo.get("sensor_id").isJsonNull()) sensorId = jo.get("sensor_id").getAsString();
                 else if (jo.has("S_id") && !jo.get("S_id").isJsonNull()) sensorId = jo.get("S_id").getAsString();
 
+                // Permite leer campos anidados dentro de un objeto "data" si existen allí
+                JsonObject dataObj = (jo.has("data") && jo.get("data").isJsonObject()) ? jo.getAsJsonObject("data") : null;
+                // Ubicación puede venir en objetos "location" o "loc"
+                JsonObject locationObj = (jo.has("location") && jo.get("location").isJsonObject()) ? jo.getAsJsonObject("location") : null;
+                JsonObject locObj = (jo.has("loc") && jo.get("loc").isJsonObject()) ? jo.getAsJsonObject("loc") : null;
+
                 Timestamp ts = null;
                 if (jo.has("time") && !jo.get("time").isJsonNull()) {
                     try {
@@ -92,7 +98,7 @@ public class MQTTSuscriber implements MqttCallback {
                     con = conector.obtainConnection(true);
 
                     // traffic_light
-                    if (jo.has("current_state") || jo.has("cycle_position")) {
+                    if (jo.has("current_state") || jo.has("state") || jo.has("cycle_position")) {
                         // Ensure sensor exists: insert or update minimal metadata if provided in payload
                         if (sensorId != null) {
                             PreparedStatement psSensor = con.prepareStatement(
@@ -105,12 +111,25 @@ public class MQTTSuscriber implements MqttCallback {
                                             + "district = COALESCE(EXCLUDED.district, sensors.district), "
                                             + "neighborhood = COALESCE(EXCLUDED.neighborhood, sensors.neighborhood)");
                             psSensor.setString(1, sensorId);
-                            if (jo.has("street_id") && !jo.get("street_id").isJsonNull()) psSensor.setString(2, jo.get("street_id").getAsString()); else psSensor.setNull(2, java.sql.Types.CHAR);
-                            if (jo.has("sensor_type") && !jo.get("sensor_type").isJsonNull()) psSensor.setString(3, jo.get("sensor_type").getAsString()); else psSensor.setNull(3, java.sql.Types.VARCHAR);
-                            if (jo.has("latitude") && !jo.get("latitude").isJsonNull()) psSensor.setDouble(4, jo.get("latitude").getAsDouble()); else psSensor.setNull(4, java.sql.Types.DOUBLE);
-                            if (jo.has("longitude") && !jo.get("longitude").isJsonNull()) psSensor.setDouble(5, jo.get("longitude").getAsDouble()); else psSensor.setNull(5, java.sql.Types.DOUBLE);
-                            if (jo.has("district") && !jo.get("district").isJsonNull()) psSensor.setString(6, jo.get("district").getAsString()); else psSensor.setNull(6, java.sql.Types.VARCHAR);
-                            if (jo.has("neighborhood") && !jo.get("neighborhood").isJsonNull()) psSensor.setString(7, jo.get("neighborhood").getAsString()); else psSensor.setNull(7, java.sql.Types.VARCHAR);
+                            JsonElement streetIdEl = getField(jo, dataObj, locationObj, locObj, "street_id");
+                            streetIdEl = streetIdEl != null ? streetIdEl : getField(jo, dataObj, locationObj, locObj, "Str_id");
+                            JsonElement sensorTypeEl = getField(jo, dataObj, locationObj, locObj, "sensor_type");
+                            sensorTypeEl = sensorTypeEl != null ? sensorTypeEl : getField(jo, dataObj, locationObj, locObj, "S_type");
+                            JsonElement latEl = getField(jo, dataObj, locationObj, locObj, "latitude");
+                            latEl = latEl != null ? latEl : getField(jo, dataObj, locationObj, locObj, "lat");
+                            JsonElement lonEl = getField(jo, dataObj, locationObj, locObj, "longitude");
+                            lonEl = lonEl != null ? lonEl : getField(jo, dataObj, locationObj, locObj, "long");
+                            JsonElement districtEl = getField(jo, dataObj, locationObj, locObj, "district");
+                            districtEl = districtEl != null ? districtEl : getField(jo, dataObj, locationObj, locObj, "zona");
+                            JsonElement neighborhoodEl = getField(jo, dataObj, locationObj, locObj, "neighborhood");
+                            neighborhoodEl = neighborhoodEl != null ? neighborhoodEl : getField(jo, dataObj, locationObj, locObj, "barrio");
+
+                            if (streetIdEl != null) psSensor.setString(2, streetIdEl.getAsString()); else psSensor.setNull(2, java.sql.Types.CHAR);
+                            if (sensorTypeEl != null) psSensor.setString(3, sensorTypeEl.getAsString()); else psSensor.setNull(3, java.sql.Types.VARCHAR);
+                            if (latEl != null) psSensor.setDouble(4, latEl.getAsDouble()); else psSensor.setNull(4, java.sql.Types.DOUBLE);
+                            if (lonEl != null) psSensor.setDouble(5, lonEl.getAsDouble()); else psSensor.setNull(5, java.sql.Types.DOUBLE);
+                            if (districtEl != null) psSensor.setString(6, districtEl.getAsString()); else psSensor.setNull(6, java.sql.Types.VARCHAR);
+                            if (neighborhoodEl != null) psSensor.setString(7, neighborhoodEl.getAsString()); else psSensor.setNull(7, java.sql.Types.VARCHAR);
                             try { psSensor.executeUpdate(); } catch (SQLException ex) { Log.logmqtt.warn("Could not upsert sensor metadata: {}", ex.toString()); }
                             psSensor.close();
                         } else {
@@ -122,18 +141,33 @@ public class MQTTSuscriber implements MqttCallback {
                                 "INSERT INTO traffic_light (sensor_id, time, current_state, cycle_position, time_remaining, traffic_light_type, circulation_dir, pedestrian_waiting, pedestrian_button_pressed, malfunction_detected, cycle_count, state_changed, last_state_change) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                         ps.setString(1, sensorId);
                         ps.setTimestamp(2, ts != null ? ts : new Timestamp(new Date().getTime()));
-                        if (jo.has("current_state") && !jo.get("current_state").isJsonNull()) ps.setString(3, jo.get("current_state").getAsString()); else ps.setNull(3, java.sql.Types.VARCHAR);
-                        if (jo.has("cycle_position") && !jo.get("cycle_position").isJsonNull()) ps.setInt(4, jo.get("cycle_position").getAsInt()); else ps.setNull(4, java.sql.Types.INTEGER);
-                        if (jo.has("time_remaining") && !jo.get("time_remaining").isJsonNull()) ps.setInt(5, jo.get("time_remaining").getAsInt()); else ps.setNull(5, java.sql.Types.INTEGER);
-                        if (jo.has("traffic_light_type") && !jo.get("traffic_light_type").isJsonNull()) ps.setString(6, jo.get("traffic_light_type").getAsString()); else ps.setNull(6, java.sql.Types.VARCHAR);
-                        if (jo.has("circulation_dir") && !jo.get("circulation_dir").isJsonNull()) ps.setString(7, jo.get("circulation_dir").getAsString()); else ps.setNull(7, java.sql.Types.VARCHAR);
-                        if (jo.has("pedestrian_waiting") && !jo.get("pedestrian_waiting").isJsonNull()) ps.setBoolean(8, jo.get("pedestrian_waiting").getAsBoolean()); else ps.setNull(8, java.sql.Types.BOOLEAN);
-                        if (jo.has("pedestrian_button_pressed") && !jo.get("pedestrian_button_pressed").isJsonNull()) ps.setBoolean(9, jo.get("pedestrian_button_pressed").getAsBoolean()); else ps.setNull(9, java.sql.Types.BOOLEAN);
-                        if (jo.has("malfunction_detected") && !jo.get("malfunction_detected").isJsonNull()) ps.setBoolean(10, jo.get("malfunction_detected").getAsBoolean()); else ps.setNull(10, java.sql.Types.BOOLEAN);
-                        if (jo.has("cycle_count") && !jo.get("cycle_count").isJsonNull()) ps.setInt(11, jo.get("cycle_count").getAsInt()); else ps.setNull(11, java.sql.Types.INTEGER);
-                        if (jo.has("state_changed") && !jo.get("state_changed").isJsonNull()) ps.setBoolean(12, jo.get("state_changed").getAsBoolean()); else ps.setNull(12, java.sql.Types.BOOLEAN);
-                        if (jo.has("last_state_change") && !jo.get("last_state_change").isJsonNull()) {
-                            try { ps.setTimestamp(13, Timestamp.from(Instant.parse(jo.get("last_state_change").getAsString()))); } catch (Exception e) { ps.setNull(13, java.sql.Types.TIMESTAMP); }
+                        JsonElement currentStateEl = getField(jo, dataObj, locationObj, locObj, "current_state");
+                        currentStateEl = currentStateEl != null ? currentStateEl : getField(jo, dataObj, locationObj, locObj, "state");
+                        JsonElement cyclePosEl = getField(jo, dataObj, locationObj, locObj, "cycle_position");
+                        JsonElement timeRemainingEl = getField(jo, dataObj, locationObj, locObj, "time_remaining");
+                        JsonElement tlTypeEl = getField(jo, dataObj, locationObj, locObj, "traffic_light_type");
+                        tlTypeEl = tlTypeEl != null ? tlTypeEl : getField(jo, dataObj, locationObj, locObj, "tl_type");
+                        JsonElement circulationEl = getField(jo, dataObj, locationObj, locObj, "circulation_dir");
+                        JsonElement pedWaitEl = getField(jo, dataObj, locationObj, locObj, "pedestrian_waiting");
+                        pedWaitEl = pedWaitEl != null ? pedWaitEl : getField(jo, dataObj, locationObj, locObj, "wait");
+                        JsonElement pedBtnEl = getField(jo, dataObj, locationObj, locObj, "pedestrian_button_pressed");
+                        JsonElement malfunctionEl = getField(jo, dataObj, locationObj, locObj, "malfunction_detected");
+                        JsonElement cycleCountEl = getField(jo, dataObj, locationObj, locObj, "cycle_count");
+                        JsonElement stateChangedEl = getField(jo, dataObj, locationObj, locObj, "state_changed");
+                        JsonElement lastStateChangeEl = getField(jo, dataObj, locationObj, locObj, "last_state_change");
+
+                        if (currentStateEl != null) ps.setString(3, currentStateEl.getAsString()); else ps.setNull(3, java.sql.Types.VARCHAR);
+                        if (cyclePosEl != null) ps.setInt(4, cyclePosEl.getAsInt()); else ps.setNull(4, java.sql.Types.INTEGER);
+                        if (timeRemainingEl != null) ps.setInt(5, timeRemainingEl.getAsInt()); else ps.setNull(5, java.sql.Types.INTEGER);
+                        if (tlTypeEl != null) ps.setString(6, tlTypeEl.getAsString()); else ps.setNull(6, java.sql.Types.VARCHAR);
+                        if (circulationEl != null) ps.setString(7, circulationEl.getAsString()); else ps.setNull(7, java.sql.Types.VARCHAR);
+                        if (pedWaitEl != null) ps.setBoolean(8, pedWaitEl.getAsBoolean()); else ps.setNull(8, java.sql.Types.BOOLEAN);
+                        if (pedBtnEl != null) ps.setBoolean(9, pedBtnEl.getAsBoolean()); else ps.setNull(9, java.sql.Types.BOOLEAN);
+                        if (malfunctionEl != null) ps.setBoolean(10, malfunctionEl.getAsBoolean()); else ps.setNull(10, java.sql.Types.BOOLEAN);
+                        if (cycleCountEl != null) ps.setInt(11, cycleCountEl.getAsInt()); else ps.setNull(11, java.sql.Types.INTEGER);
+                        if (stateChangedEl != null) ps.setBoolean(12, stateChangedEl.getAsBoolean()); else ps.setNull(12, java.sql.Types.BOOLEAN);
+                        if (lastStateChangeEl != null) {
+                            try { ps.setTimestamp(13, Timestamp.from(Instant.parse(lastStateChangeEl.getAsString()))); } catch (Exception e) { ps.setNull(13, java.sql.Types.TIMESTAMP); }
                         } else ps.setNull(13, java.sql.Types.TIMESTAMP);
                         ps.executeUpdate();
                         Log.logmqtt.info("Inserted traffic_light record for sensor {}", sensorId);
@@ -144,8 +178,11 @@ public class MQTTSuscriber implements MqttCallback {
 
                     // measurements
                     if (jo.has("value") || jo.has("measurements")) {
-                        if (jo.has("measurements") && jo.get("measurements").isJsonArray()) {
-                            JsonArray arr = jo.getAsJsonArray("measurements");
+                        JsonElement measurementsEl = getField(jo, dataObj, locationObj, locObj, "measurements");
+                        JsonElement valueEl = getField(jo, dataObj, locationObj, locObj, "value");
+
+                        if (measurementsEl != null && measurementsEl.isJsonArray()) {
+                            JsonArray arr = measurementsEl.getAsJsonArray();
                             PreparedStatement ps = con.prepareStatement("INSERT INTO measurements (time, value) VALUES (?, ?)");
                             for (JsonElement e : arr) {
                                 if (e.isJsonObject() && e.getAsJsonObject().has("value")) {
@@ -159,8 +196,8 @@ public class MQTTSuscriber implements MqttCallback {
                             ps.executeBatch();
                             Log.logmqtt.info("Inserted {} measurements", arr.size());
                             return;
-                        } else if (jo.has("value")) {
-                            int v = jo.get("value").getAsInt();
+                        } else if (valueEl != null) {
+                            int v = valueEl.getAsInt();
                             PreparedStatement ps = con.prepareStatement("INSERT INTO measurements (time, value) VALUES (?, ?)");
                             ps.setTimestamp(1, ts != null ? ts : new Timestamp(new Date().getTime()));
                             ps.setInt(2, v);
@@ -189,5 +226,14 @@ public class MQTTSuscriber implements MqttCallback {
 
     @Override
     public void deliveryComplete(IMqttDeliveryToken token) {
+    }
+
+    // Obtiene un campo desde el objeto raíz o, si no existe allí, desde objetos anidados "data", "location" o "loc"
+    private JsonElement getField(JsonObject root, JsonObject dataObj, JsonObject locationObj, JsonObject locObj, String key) {
+        if (root != null && root.has(key) && !root.get(key).isJsonNull()) return root.get(key);
+        if (dataObj != null && dataObj.has(key) && !dataObj.get(key).isJsonNull()) return dataObj.get(key);
+        if (locationObj != null && locationObj.has(key) && !locationObj.get(key).isJsonNull()) return locationObj.get(key);
+        if (locObj != null && locObj.has(key) && !locObj.get(key).isJsonNull()) return locObj.get(key);
+        return null;
     }
 }

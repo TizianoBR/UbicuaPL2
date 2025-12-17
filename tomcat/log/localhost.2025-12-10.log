@@ -1,0 +1,70 @@
+10-Dec-2025 19:34:30.093 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Marking servlet [Servlets.GetStreets] as unavailable
+10-Dec-2025 19:34:30.094 SEVERE [http-nio-8080-exec-18] org.apache.catalina.core.StandardWrapperValve.invoke Allocate exception for servlet [Servlets.GetStreets]
+	java.lang.Error: Unresolved compilation problems: 
+	The declared package "servlets" does not match the expected package "Servlets"
+	The import logic cannot be resolved
+	The import database cannot be resolved
+	ConectionDDBB cannot be resolved to a type
+	ConectionDDBB cannot be resolved to a type
+	Log cannot be resolved
+	ConectionDDBB cannot be resolved to a type
+
+		at Servlets.GetStreets.<init>(GetStreets.java:1)
+		at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:140)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:753)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:571)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:113)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1474)
+10-Dec-2025 19:50:29.493 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Marking servlet [Servlets.GetStreets] as unavailable
+10-Dec-2025 19:50:29.493 SEVERE [http-nio-8080-exec-33] org.apache.catalina.core.StandardWrapperValve.invoke Allocate exception for servlet [Servlets.GetStreets]
+	java.lang.Error: Unresolved compilation problems: 
+	The declared package "servlets" does not match the expected package "Servlets"
+	The import logic cannot be resolved
+	The import database cannot be resolved
+	ConectionDDBB cannot be resolved to a type
+	ConectionDDBB cannot be resolved to a type
+	Log cannot be resolved
+	ConectionDDBB cannot be resolved to a type
+
+		at Servlets.GetStreets.<init>(GetStreets.java:1)
+		at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:140)
+		at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:753)
+		at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:571)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:113)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+		at java.base/java.lang.Thread.run(Thread.java:1474)

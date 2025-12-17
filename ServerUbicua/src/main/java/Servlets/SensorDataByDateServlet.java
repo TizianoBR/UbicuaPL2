@@ -20,14 +20,11 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import mqtt.MQTTPublisher;
-import mqtt.MQTTSuscriber;
-import mqtt.MQTTBroker;
 
 import logic.Log;
 
@@ -36,8 +33,6 @@ public class SensorDataByDateServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private DataSource dataSource;
-    private MQTTSuscriber subscriber;
-    private MQTTPublisher publisher;
     private Gson gson = new Gson();
 
     @Override
@@ -46,12 +41,6 @@ public class SensorDataByDateServlet extends HttpServlet {
             // JNDI lookup para el pool JDBC
             Context ctx = new InitialContext();
             dataSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/ubicuabbdd");
-
-            // MQTT publisher / subscriber (como en tu código original)
-            publisher = new MQTTPublisher();
-            subscriber = new MQTTSuscriber(new MQTTBroker());
-            subscriber.subscribeTopic("city/sensors/commands");
-
         } catch (Exception e) {
             throw new ServletException("Error inicializando MQTT o DB", e);
         }
@@ -84,10 +73,10 @@ public class SensorDataByDateServlet extends HttpServlet {
         LocalDateTime start = date.atStartOfDay();
         LocalDateTime end = date.plusDays(1).atStartOfDay();
 
-        String sql = "SELECT sensor_id, sensor_type, timestamp, data_json " +
-                     "FROM sensor_data " +
-                     "WHERE timestamp >= ? AND timestamp < ? " +
-                     "ORDER BY timestamp ASC";
+        String sql = "SELECT sensor_id, time, current_state " +
+                     "FROM traffic_light " +
+                     "WHERE time >= ? AND time < ? " +
+                     "ORDER BY time ASC";
 
         List<Map<String, Object>> results = new ArrayList<>();
 
@@ -102,30 +91,20 @@ public class SensorDataByDateServlet extends HttpServlet {
                 while (rs.next()) {
                     Map<String, Object> row = new HashMap<>();
                     row.put("sensor_id", rs.getString("sensor_id"));
-                    row.put("sensor_type", rs.getString("sensor_type"));
-                    row.put("timestamp", rs.getTimestamp("timestamp").toInstant().toString());
+                    row.put("time", rs.getTimestamp("time").toLocalDateTime().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+                    row.put("current_state", rs.getString("current_state"));
 
-                    String dataJson = rs.getString("data_json");
-                    // Si data_json contiene JSON, insertarlo como JsonElement para que no venga como string escapado
-                    try {
-                        JsonElement parsed = JsonParser.parseString(dataJson);
-                        row.put("data", parsed);
-                    } catch (Exception pe) {
-                        // si no es JSON válido, lo devolvemos como string
-                        row.put("data", dataJson);
-                    }
+                    // Si current_state contiene JSON, insertarlo como JsonElement para que no venga como string escapado
+                    // try {
+                    //     JsonElement parsed = JsonParser.parseString(currentState);
+                    //     row.put("data", parsed);
+                    // } catch (Exception pe) {
+                    //     // si no es JSON válido, lo devolvemos como string
+                    //     row.put("data", currentState);
+                    // }
 
                     results.add(row);
                 }
-            }
-
-            // publicar evento MQTT con info de la consulta
-            try {
-                String logPayload = "{\"event\":\"query\", \"date\":\"" + dateStr + "\"}";
-                publisher.publish(new MQTTBroker(), "city/logs", logPayload);
-            } catch (Exception mqttEx) {
-                // no fallamos la petición por un fallo en MQTT; pero puedes loguearlo
-                // System.err.println("MQTT publish failed: " + mqttEx.getMessage());
             }
 
             // Serializar con Gson. Nota: Gson convertirá los JsonElement correctamente.
