@@ -5,7 +5,9 @@ database\Topics.class
 Servlets\SensorDataServlet.class
 Servlets\SimpleTest.class
 logic\Projectinitializer.class
+logic\DatosSensor.class
 mqtt\MQTTPublisher.class
+Servlets\GetDataFromSensor.class
 Servlets\TriggerTL.class
 logic\Measurement.class
 mqtt\MQTTBroker.class
@@ -14,3 +16,4 @@ mqtt\MQTTSuscriber.class
 logic\Logic.class
 Servlets\GetData.class
 Servlets\SensorDataByDateServlet.class
+Servlets\GetSensors.class

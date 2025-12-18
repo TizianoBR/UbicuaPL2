@@ -1,5 +1,6 @@
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Database\ConectionDDBB.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Database\Topics.java
+C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Logic\DatosSensor.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Logic\Log.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Logic\Logic.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Logic\Measurement.java
@@ -8,6 +9,8 @@ C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Mqtt\MQTTPublisher.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Mqtt\MQTTSuscriber.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Servlets\GetData.java
+C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Servlets\GetDataFromSensor.java
+C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Servlets\GetSensors.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Servlets\GetStreets.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Servlets\SensorDataByDateServlet.java
 C:\Users\tizia\Desktop\Universidad\Computacion_ubicua\UbicuaPL2\ServerUbicua\src\main\java\Servlets\SensorDataServlet.java

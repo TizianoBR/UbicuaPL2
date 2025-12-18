@@ -1560,3 +1560,61 @@ org.postgresql.util.PSQLException: The column name time was not found in this Re
 2025-12-17 19:05:51.954 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
 2025-12-17 19:05:53.335 INFO  servlets.GetData.doGet(GetData.java:32) log ### Values=>[{"value":200,"date":"Jun 1, 2024, 2:00:00 PM"},{"value":150,"date":"Jun 1, 2024, 1:00:00 PM"},{"value":100,"date":"Jun 1, 2024, 12:00:00 PM"}]
 2025-12-17 19:05:53.335 INFO  servlets.GetData.doGet(GetData.java:32) log ### Values=>[{"value":200,"date":"Jun 1, 2024, 2:00:00 PM"},{"value":150,"date":"Jun 1, 2024, 1:00:00 PM"},{"value":100,"date":"Jun 1, 2024, 12:00:00 PM"}]
+2025-12-18 18:11:18.639 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-12-18 18:11:20.517 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:19) log ### Preparing to publish
+2025-12-18 18:11:21.682 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 18:11:21.877 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 131506000, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 18:11:21.878 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 18:11:23.322 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 18:11:23.323 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 131506000, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 18:11:23.324 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:31:21.726 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-12-18 19:31:23.177 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:19) log ### Preparing to publish
+2025-12-18 19:31:54.904 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:31:54.909 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 54652465, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:31:54.910 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:31:54.946 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:31:54.947 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 54652465, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:31:54.948 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:32:27.367 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:32:27.369 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 1291881877, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:32:27.370 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:32:27.377 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:32:27.378 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 1291881877, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:32:27.379 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:40:17.781 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-12-18 19:40:19.473 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:19) log ### Preparing to publish
+2025-12-18 19:40:32.172 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:40:32.289 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 1860029310, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:40:32.291 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:40:33.560 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:40:33.561 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 1860029310, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:40:33.561 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:41:13.022 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:41:13.025 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 200258113, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:41:13.026 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:41:13.050 ERROR servlets.GetDataFromSensor.doGet(GetDataFromSensor.java:50) log ### Exception: org.postgresql.util.PSQLException: The column name sensor_id was not found in this ResultSet.
+2025-12-18 19:41:13.050 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:41:13.051 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 200258113, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:41:13.051 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:42:27.683 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:42:27.685 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 40085260, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:42:27.686 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:42:27.687 ERROR servlets.GetDataFromSensor.doGet(GetDataFromSensor.java:50) log ### Exception: org.postgresql.util.PSQLException: The column name sensor_id was not found in this ResultSet.
+2025-12-18 19:42:27.688 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:42:27.689 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 40085260, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:42:27.690 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:52:23.770 INFO  logic.Projectinitializer.contextInitialized(Projectinitializer.java:34) log ### -->Suscribe Topics<--
+2025-12-18 19:52:25.449 INFO  mqtt.MQTTPublisher.publish(MQTTPublisher.java:19) log ### Preparing to publish
+2025-12-18 19:52:26.648 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:52:26.699 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 689229920, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:52:26.704 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:52:27.897 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:52:27.898 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 689229920, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:52:27.898 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
+2025-12-18 19:52:59.569 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:22) log ### Attempt 0 to connect to the database
+2025-12-18 19:52:59.577 DEBUG database.ConectionDDBB.obtainConnection(ConectionDDBB.java:33) log ### Connection creation. Bd connection identifier: 1140459290, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:52:59.577 INFO  database.ConectionDDBB.obtainConnection(ConectionDDBB.java:36) log ### Connection obtained in the attempt: 0
+2025-12-18 19:52:59.580 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:72) log ### Closing the connection
+2025-12-18 19:52:59.582 DEBUG database.ConectionDDBB.closeConnection(ConectionDDBB.java:76) log ### Connection closed. Bd connection identifier: 1140459290, URL=jdbc:postgresql://ubicuabbdd:5432/ubicuabbdd, PostgreSQL JDBC Driver obtained in 2025-12-18
+2025-12-18 19:52:59.583 INFO  database.ConectionDDBB.closeConnection(ConectionDDBB.java:79) log ### The connection has been closed
