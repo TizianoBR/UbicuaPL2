@@ -69,8 +69,11 @@ public class MQTTSuscriber implements MqttCallback {
         Log.logmqtt.info("{}: {}", topic, payload);
 
         try {
+            Log.logmqtt.info("Parsing JSON payload");
             JsonElement je = JsonParser.parseString(payload);
+            Log.logmqtt.info("Parsed JSON payload");
             if (je.isJsonObject()) {
+                Log.logmqtt.info("Processing JSON object");
                 JsonObject jo = je.getAsJsonObject();
 
                 String sensorId = null;
@@ -92,13 +95,16 @@ public class MQTTSuscriber implements MqttCallback {
                     }
                 }
 
+                Log.logmqtt.info("Connecting to database to insert data");
                 ConectionDDBB conector = new ConectionDDBB();
                 Connection con = null;
+                Log.logmqtt.info("Obtained DB connection");
                 try {
                     con = conector.obtainConnection(true);
+                    Log.logmqtt.info("Connected to DB");
 
                     // traffic_light
-                    if (jo.has("current_state") || jo.has("state") || jo.has("cycle_position")) {
+                    if (jo.has("current_state") || jo.has("data") || jo.has("cycle_position")) {
                         // Ensure sensor exists: insert or update minimal metadata if provided in payload
                         if (sensorId != null) {
                             PreparedStatement psSensor = con.prepareStatement(
@@ -123,6 +129,10 @@ public class MQTTSuscriber implements MqttCallback {
                             districtEl = districtEl != null ? districtEl : getField(jo, dataObj, locationObj, locObj, "zona");
                             JsonElement neighborhoodEl = getField(jo, dataObj, locationObj, locObj, "neighborhood");
                             neighborhoodEl = neighborhoodEl != null ? neighborhoodEl : getField(jo, dataObj, locationObj, locObj, "barrio");
+
+                            Log.logmqtt.info("Upserting sensor metadata:");
+                            Log.logmqtt.info("%s, %s, %s, %s, %s, %s, %s".formatted(sensorId,
+                                    streetIdEl, sensorTypeEl, latEl, lonEl, districtEl, neighborhoodEl));
 
                             if (streetIdEl != null) psSensor.setString(2, streetIdEl.getAsString()); else psSensor.setNull(2, java.sql.Types.CHAR);
                             if (sensorTypeEl != null) psSensor.setString(3, sensorTypeEl.getAsString()); else psSensor.setNull(3, java.sql.Types.VARCHAR);
@@ -155,6 +165,7 @@ public class MQTTSuscriber implements MqttCallback {
                         JsonElement cycleCountEl = getField(jo, dataObj, locationObj, locObj, "cycle_count");
                         JsonElement stateChangedEl = getField(jo, dataObj, locationObj, locObj, "state_changed");
                         JsonElement lastStateChangeEl = getField(jo, dataObj, locationObj, locObj, "last_state_change");
+                        Log.logmqtt.info("%s, %s".formatted(currentStateEl, pedWaitEl));
 
                         if (currentStateEl != null) ps.setString(3, currentStateEl.getAsString()); else ps.setNull(3, java.sql.Types.VARCHAR);
                         if (cyclePosEl != null) ps.setInt(4, cyclePosEl.getAsInt()); else ps.setNull(4, java.sql.Types.INTEGER);
@@ -209,6 +220,8 @@ public class MQTTSuscriber implements MqttCallback {
 
                 } catch (SQLException ex) {
                     Log.logmqtt.error("DB error inserting message: {}", ex.toString());
+                } catch (Exception ex) {
+                    Log.logmqtt.error("Error inserting message into DB: {}", ex.toString());
                 } finally {
                     conector.closeConnection(con);
                 }
